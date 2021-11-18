@@ -3,7 +3,8 @@
 <html lang="ja">
 <head>
 	<meta http-equiv='X-UA-Compatible' content="ie=edge">
-	<link rel="stylesheet" href="../static/stylesheet-top.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../static/stylesheet.css">
 	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">  
   <style>@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Rajdhani:wght@400;500&display=swap');</style>
   <style>@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');</style>
@@ -19,22 +20,41 @@
 	</header>
 	
 	<div class="top">
-	<h>顔タイプ診断</h></div>
+	<img class=moji src="../static/img/yellow_moji.jpg"></div>
 
 	<div class="main">
-		<h2>顔タイプ診断とは？</h2>
-		<p>パーソナルカラーや骨格診断が話題になるなかで、顔タイプ診断も自分の魅力を引き出すために重要なツールだといわれています。顔の形や立体感、パーツのバランスで直線と曲線のどちらが多いかと、顔の世代間（大人っぽいか子どもっぽいか）の２つの軸から、魅力を引き立てるファッションのテイストを知ることができます。
-		<br></p>
-		<img class=matrix src="../static/img/matrix.jpg">
-		<h2>診断してみる</h2>
-		<p>パーソナルカラーと骨格診断、顔タイプ診断の結果を組み合わせて、ファッションやメイクをもっとたのしみましょう！</p>
-		<div class="button"> <a href="index.html">診断にすすむ   <i class="fas fa-chevron-right"></i></a>
-    </div>
-		
-		
+		<h2>撮影時の注意点</h2>
+		<ul>
+		<li>明るいところで、顔全体がうつるように撮影してください</li>
+		<li>照明などの環境の変化によって診断結果が異なる場合があります</li>
+		<li>複数人での写真の場合、上手く読み込めない可能性があります</li>
+		</ul>
+		<h2>個人情報の取り扱いについて</h2>
+		<p>診断にあたり、提供いただいた顔写真は、下記目的で使用します</p>
+		<ul>
+		<li>顔タイプを診断</li>
+		<li>顔タイプ診断の精度向上</li>
+		</ul>
+		<p>原則としてこれ以外の目的で使用することはありません。</p>
+		<form method='POST' enctype="multipart/form-data">
+			<label class="choice_btn"><i class="far fa-image"></i>  ファイルを選択
+			<input class="file_choose" type="file" name="file" id="edit_image"></label>
+			<label class="submit_btn">送信  <i class="far fa-paper-plane"></i>
+			<input class='btn' value="送信" type="submit"></label>
+        </form>
+
+		</form>
+		<p class="message">{{message}}</p>
+		<br>
+		<p class="answer"><span class="under">{{answer}}</span></p>
+	</div>
+	<div class="second">
+	<img class=matrix src="../static/img/matrix.jpg">
 	</div>
 	<footer>
 		<p></p>
 	</footer>
+	
+
 </body>
 </html>
